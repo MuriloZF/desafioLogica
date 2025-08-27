@@ -1,13 +1,6 @@
-function inputFunction(){
-	const textarea = document.querySelector("textarea");
-	const inputValue = textarea.value;
-	const fnc = document.getElementById("FNC");
-	const fdc = document.getElementById("FDC");
-	fnc.textContent = inputValue;
-	MathJax.typesetPromise([fnc]);
-	fdc.textContent = inputValue;
-	fdc.textContent = inputValue;
-	MathJax.typesetPromise([fdc]);
+function getInput(){
+	const textArea = document.querySelector("textarea");
+	return textArea.value;
 }
 
 function clearFunction(){
@@ -18,16 +11,27 @@ function clearFunction(){
 	fdc.textContent = "";
 }
 
-function fnc(){}
+function fncFunction(){
+	const inputValue = getInput();
+	const fnc = document.getElementById("FNC");
+	fnc.textContent = inputValue;
+	MathJax.typesetPromise([fnc]);
+}
 
-function fdc(){}
+function fdcFunction(){
+	const inputValue = getInput();
+	const fdc = document.getElementById("FDC");
+	fdc.textContent = inputValue;
+	MathJax.typesetPromise([fdc]);
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
     const submit = document.querySelector("input[type='submit']");
     submit.addEventListener("click", (event) => {
         event.preventDefault();
-        inputFunction();
+        fncFunction();
+	fdcFunction();
     });
     const clearButton = document.querySelector("button");
     clearButton.addEventListener("click", (event) => {
