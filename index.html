@@ -5,16 +5,25 @@
 	<meta name = "viewport" content = "width=device,width, initial-scale=1.0, minimum-scale=1">
 	<title> Desafio Lógica </title>
 	<script src = "logic.js"></script>
+	<script>
+		MathJax = {
+			tex: {
+				inlineMath: {'[+]': [['$', '$']]}
+			}
+		};
+	</script>
+	<script defer src = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 	<link rel = "stylesheet" href = "styles.css">
 </head>
 <body>
 	<h1> Lógica Funcional </h1>
 	<div>
-		<form>
+		<form id = "form" >
 			<p> Fórmula(Latex): </p>
 			<textarea rows = "10" cols = "70"></textarea>
 			<p></p>
 			<input type = "submit" value = "Gerar"/>
+			<button id = "clear"> Clear </button>
 		</form>
 	</div>
 	<div class = "cardsContainer">
