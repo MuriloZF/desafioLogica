@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device,width, initial-scale=1.0, minimum-scale=1">
+	<title> Desafio Lógica </title>
+	<script src = "logic.js"></script>
+	<script>
+		MathJax = {
+			tex: {
+				inlineMath: {'[+]': [['$', '$']]}
+			}
+		};
+	</script>
+	<script defer src = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+	<link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+	<h1> First-Order Logic </h1>
+	<p> To check the logic notations in Latex, check <a href="https://www.geeksforgeeks.org/engineering-mathematics/logic-notations-in-latex/">Geek for geeks</a>.</p>
+	<div>
+		<form id = "form" >
+			<h2> Function(Latex): </h2>
+			<p> The function must be between $ signs. </p>
+			<textarea rows = "10" cols = "70" placeholder = "$ A \land B $"></textarea>
+			<p></p>
+			<input type = "submit" value = "Generate"/>
+			<button id = "clear"> Clear </button>
+		</form>
+	</div>
+	<div class = "cardsContainer">
+		<div class = "card">
+			<h3> Conjuctive normal form: </h3>
+			<div>
+				<p id = "FNC"></p>
+			</div>
+		</div>
+		<div class = "card">
+			<h3> Disjunctive normal form: </h3>
+			<div>
+				<p id = "FDC"></p>
+			</div>
+		</div>
+	</div>
+	<div class = "cardsContainer">
+		<div class = "card">
+			<h3> Clausal formula: </h3>
+			<div>
+				<p id = "ClausalFormula"></p>
+			</div>
+		</div>
+		<div class = "card">
+			<h3> Horn clause: </h3>
+			<div>
+				<p id = "HorneClause"></p>
+			</div>
+		</div>
+	</div>
+<hr>
+<footer>
+	<p> Made by <a href = "https://github.com/MuriloZF">MuriloZF</a></p>
+</footer>
+</body>
+</html>
